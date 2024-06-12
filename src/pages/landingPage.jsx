@@ -1,10 +1,12 @@
 import React, { useEffect } from 'react';
 import { Card, Col, Row } from "react-bootstrap";
+import "../App.css";
 import PageCostumizada from '../component/PageCostumizada';
 import CardCostumizado from "../component/cardCostomizado";
 import Descubra from "../component/surprise";
 import imagemprin from "../img/brain.png";
 import imagemprin2 from "../img/terapia.png";
+
 export default function LandingPage() {
     // Função para lidar com o efeito de deslocamento
     const handleScroll = () => {
@@ -63,23 +65,22 @@ export default function LandingPage() {
             <Card id='firstCard' style={{ 
                 border: 'none',
                 backgroundColor: 'white',
-                width:'100vw',
+                maxWidth: "100vw",
+                width:'100%',
                 height: '100vh',
                 textAlign: 'center',
                 justifyContent: 'center', 
                 alignItems: 'center', 
-                minHeight: '100vh', 
-                overflow: 'none', 
+                minHeight: '100%', 
+                overflow: 'hidden',  
                 position: 'fixed', // Mantém o primeiro cartão fixo
                 top: 0,
                 zIndex: 2 // Inicialmente acima do segundo cartão
 
             }}>
-    <Row style={{padding: "0% 10%",  textAlign: 'center', alignItems: "center", justifyContent: "center", margin: 0, overflow: 'none', }} >
-        <Col style={{  textAlign: 'center', alignItems: "center", justifyContent: "center"}} lg={4} sm={12}>
-            <div style={{ textAlign: 'center', alignItems: "center", justifyContent: "center",marginTop: 80,  overflow: 'hidden' }}>
-                <h1 style={{color:'black', textAlign: 'center' }}>Bem-vindo ao nosso site!</h1>
-            </div>
+    <Row style={{  textAlign: 'center', alignItems: "center", justifyContent: "center", margin: 0, overflow: 'hidden', }} >
+        <Col  style={{  textAlign: 'center', alignItems: "center", justifyContent: "center"}} lg={4} sm={12}>
+          
         </Col>
         <Col  lg={4} sm={12} style={{textDecoration: 'none', alignItems: 'center', marginTop: 100, textAlign:'center',  overflow: 'hidden'}}>
                 <Descubra  id="home"></Descubra>
@@ -97,26 +98,26 @@ export default function LandingPage() {
     
     <div id='secondCard' style={{
         boxShadow: '4px 4px 4px 4px rgba(0, 0, 0, 0.5)',
-               left: 0, // Adiciona esta linha para alinhar à esquerda
-               right: 0, // Adiciona esta linha para alinhar à direita
-               margin: 'auto', // Centraliza o div na página
-               maxWidth: '200vh',
-               overflow: 'hidden' ,
+               left: 0, 
+               right: 0, 
+               margin: 'auto', 
+               maxWidth: '100%',
+               overflow: 'hidden',
                width:'100vw',
                position: 'relative',
                border: 'none',
                minHeight: '100vh',
-               zIndex: 1, // Inicialmente abaixo do primeiro cartão
+               zIndex: 1, 
                marginTop: '100vh',
                alignItems: 'center',
                justifyContent: 'center',
-               textAlign: 'center', // Permite que o segundo cartão se mova livremente
-               top: 0, // Alinha o topo do div com o topo da tela
+               textAlign: 'center', 
+               top: 0, 
             }}>
                 <PageCostumizada></PageCostumizada>
                 
         </div>
-        <Card style={{ border:'none', height: '100vh'}}>
+        <Card style={{ border:'none', height: '100vh', overflow: 'hidden', }}>
                     <h1>Terapia</h1>
                     <img alt="terapia" src={imagemprin2}></img>
 

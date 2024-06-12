@@ -13,7 +13,7 @@ export default function Header() {
   const handleShow = () => setShow(true);
 
   return (
-    <Navbar expand={'md'} fixed="top" style={{backgroundColor: '#FFB14A'}} data-scroll data-scroll-speed="-5">
+    <Navbar expand={'md'} fixed="top" style={{backgroundColor: '#FFB14A', overflow: 'hidden'}} data-scroll data-scroll-speed="-5">
       <Container>
       <Navbar.Brand as={Link} to="/"> 
           <img
@@ -24,7 +24,7 @@ export default function Header() {
             alt="React Bootstrap logo"
           />
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls="offcanvasNavbar" style={{color:"#FFB14A", border: "none"}} onClick={handleShow}>
+        <Navbar.Toggle aria-controls="offcanvasNavbar" style={{color:"#FFB14A", border: "none", overflow: 'hidden'}} onClick={handleShow}>
           <div class="container">
             <label for="label-check" class="hamburger-label">
               <div class="line" style={{backgroundColor: "black", height: "2px", width: "35px", marginBottom: "5px"}}></div>

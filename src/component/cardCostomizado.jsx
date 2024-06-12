@@ -11,7 +11,7 @@ export default function CardCostumizado(props) {
   }, []);
 
   return (
-    <Card style={{ border: 'none'}}>
+    <Card style={{ border: 'none', width: 'auto', height: 'auto'}}>
         {
             props?.img && (
               <>
